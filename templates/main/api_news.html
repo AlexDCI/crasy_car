@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Car News</title>
+     
+{% endblock %}
+
+
+
+    
+
+
+{% block content %}
+
+<body>
+    <div class="news-container">
+        <h1>Car News</h1>
+        <ul id="ul-news">
+            {% for article in news_data %}
+                <li id="link">
+                    <h2>{{ article.title }}</h2>
+                    <p>{{ article.description }}</p>
+                    <a href="{{ article.url }}" target="_blank">Read more</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+{% endblock %}
+
+

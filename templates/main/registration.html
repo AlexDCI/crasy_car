@@ -1,0 +1,97 @@
+<!-- main.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+    Registration Page
+{% endblock %}
+
+{% block content %}
+    <!-- содержимое вашей главной страницы -->
+<div style="margin-top: 10%; margin-bottom: 15%;">
+    <h1 style="margin-left: 30%;">It Is registration Page</h1>
+
+        <section id="contact">
+
+            <div class="container">
+                <div class="container contact-info">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4">
+                            <div class="contact-form">
+                                <h3>Contact Info</h3>
+        
+                                <address>
+                                    <strong>Amazing Company, Inc.</strong><br>
+                                    12345 NewYork, Street 125<br>
+                                    United States 94107<br>
+                                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                                </address>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 col-md-8">
+                            <div class="contact-form">
+                                
+                                <form id="main-contact-form" name="contact-form" method="post" action="#">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <input type="text" name="first_name" class="form-control" placeholder="Name" required id="id_first_name_helptext" id="id_first_name">
+                                        <span class="helptext" id="id_first_name_helptext"></span>
+                                        <label for="helptext">This is required your first name</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="last_name" class="form-control" placeholder="Name" required id="id_last_name">
+                                        <label for="helptext">This is required your last name</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" placeholder="Email" required id="id_email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="password" class="form-control" placeholder="password" required id="id_password">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="birth_date" class="form-control" placeholder="birth_date" required id="id_birth_date">
+                                    </div>
+                                    <div class="form-group">
+                                        <select name="seller_or_buyer" required id="id_seller_or_buyer">
+                                        <option value selected="">do you whant sell or buy your car</option>
+                                        <option value="SELL">seller</option>
+                                        <option value="BUY">buyer</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        
+        </section><!--/#bottom-->
+            
+</div>
+    
+ 
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                &copy; 2015 Company Name. Template by <a target="_blank" href="http://webthemez.com/" title="Free Bootstrap Themes and HTML Templates">WebThemez.com</a>
+            </div>
+            <div class="col-sm-6">
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</footer><!--/#footer-->
+
+
+{% endblock %}
+

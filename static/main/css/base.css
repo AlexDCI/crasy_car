@@ -1,0 +1,10 @@
+
+.weather-logo-container {
+    display: flex;
+   margin-left: -250px;
+   margin-bottom: -100px;
+  }
+  
+  .weather-logo-container > div {
+    margin-right: 30px; /* Расстояние между блоком погоды и логотипом */
+  }

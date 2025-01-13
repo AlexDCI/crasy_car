@@ -1,0 +1,42 @@
+
+.news-container {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+.ul-news {
+    list-style-type: none;
+    padding: 0;
+}
+
+.link {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+

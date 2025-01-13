@@ -1,0 +1,151 @@
+<!-- sell_car.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+    Sell Car Page
+{% endblock %}
+
+{% block content %}
+    <!-- содержимое вашей главной страницы -->
+<h1 style="margin-left: 30%;">It Is Salle Car Page</h1>
+   
+<section id="contact" style="margin-bottom: 20px;">
+
+    <div class="container">
+        <div class="container contact-info">
+            <div class="row">
+                <div class="col-sm-4 col-md-4">
+                    <div class="contact-form">
+                        <h3>Contact Info</h3>
+
+                        <address>
+                            <strong>Amazing Company, Inc.</strong><br>
+                            12345 NewYork, Street 125<br>
+                            United States 94107<br>
+                            <abbr title="Phone">P:</abbr> (123) 456-7890
+                        </address>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="col-sm-8 col-md-8">
+                    <div class="contact-form">
+                        
+                        <form id="main-contact-form" name="contact-form" method="post" action="#">
+                            {% csrf_token %}
+
+                            <div class="form-group">
+                                <label for="id_owner">Owner:</label>
+                                <select name="owner" required id="id_owner">
+                                    <option value="" selected disabled>Choose an owner</option>
+                                    <option value="{{ current_user.id }}">{{ current_user.first_name }} {{ current_user.last_name }}</option>
+                                    
+                                </select>
+                            </div>
+                        
+                            <div class="form-group" style="margin-bottom: 25px;">
+                                <select name="model_car" required id="id_model_car">
+                                    <option value selected="">Write car model:</option>
+                                    <option value="Audi">Audi</option>
+                                    <option value="BMW">BMW</option>
+                                    <option value="Chevrolet">Chevrolet</option>
+                                    <option value="Dodge">Dodge</option>
+                                    <option value="Fiat">Fiat</option>
+                                    <option value="Ford">Ford</option>
+                                    <option value="Honda">Honda</option>
+                                    <option value="Hyundai">Hyundai</option>
+                                    <option value="Jaguar">Jaguar</option>
+                                    <option value="Jeep">Jeep</option>
+                                    <option value="Kia">Kia</option>
+                                    <option value="Land Rover">Land Rover</option>
+                                    <option value="Lexus">Lexus</option>
+                                    <option value="Mazda">Mazda</option>
+                                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                                    <option value="Mitsubishi">Mitsubishi</option>
+                                    <option value="Nissan">Nissan</option>
+                                    <option value="Peugeot">Peugeot</option>
+                                    <option value="Porsche">Porsche</option>
+                                    <option value="Renault">Renault</option>
+                                    <option value="Subaru">Subaru</option>
+                                    <option value="Tesla">Tesla</option>
+                                    <option value="Toyota">Toyota</option>
+                                    <option value="Volkswagen">Volkswagen</option>
+                                    <option value="Volvo">Volvo</option>
+
+                                </select>
+                            </div>
+                            
+
+                            <div class="form-group">
+                                <input type="text" name="color_car" class="form-control" placeholder="color" required id="id_color_car">
+                                <label for="id_color_car">write car color</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" name="relise_data" class="form-control" placeholder="relise data" required id="id_relise_data">
+                                <label for="id_relise_data">Write car release date:</label>
+                            </div> 
+                            <!-- to do not fool data -->
+                            
+                            <div class="form-group" style="margin-bottom: 25px;">
+                                <select name="motor_type" required id="id_motor_type">
+                                <option value selected="">chouse motors type</option>
+                                <option value="BENZZIN">benzzin</option>
+                                <option value="DISEL">disel</option>
+                                <option value="GAS">gas</option>
+                                <option value="ELECTRO">electro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="motor_power" step="any" class="form-control" placeholder="motor power" required id="id_motor_power">
+                                <label for="id_motor_power">Write engine capacity:</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="prise" step="0.01" class="form-control" placeholder="prise" required id="id_prise">
+                                <label for="id_priser">Write price:</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="id_description_car">Describe your car:</label>
+                                <textarea name="description_car" id="" cols="40" rows="10" id="id_description_car"></textarea>
+                                
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            
+        
+    </div> 
+
+</section><!--/#bottom-->
+    
+   
+    
+ 
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                &copy; 2015 Company Name. Template by <a target="_blank" href="http://webthemez.com/" title="Free Bootstrap Themes and HTML Templates">WebThemez.com</a>
+            </div>
+            <div class="col-sm-6">
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</footer><!--/#footer-->
+    </form>
+    
+{% endblock %}

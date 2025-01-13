@@ -1,0 +1,23 @@
+<!-- main.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+    Salle_car_page
+{% endblock %}
+
+{% block content %}
+
+    <!-- содержимое вашей главной страницы -->
+    <div style="margin: 30px; padding-left: 30px; padding-top: 20px;">
+        <h1>Feedback page</h1>
+        {% for i in message %}
+        <div style="margin-top: 20px; padding-top: 20px;">
+            
+            <h4>{{ i.name }}</h4>
+            <h4>{{ i.message }}</h4>
+            {% endfor %}
+        </div>
+    
+    </div>
+    
+{% endblock %}

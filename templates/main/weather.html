@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+</head>
+    <body>
+                    
+        <div id="weather-info" style="width: 200px; height: 200px; padding: 10px;">
+            <div style="font-weight: bold; background-color: #ebe783; width: 200px; height: 150px; padding: 10px;">
+                <img style="width: 50px; height: 50px;" src="{% static 'main/img/weather.png' %}" alt="weather">
+                <h4>Temperature: {{ temperature }}°C</h4>
+                <h4>Clouds: {{ clouds }}%</h4>
+        </div>
+       
+        </div>
+    </body>
+
+</html>
